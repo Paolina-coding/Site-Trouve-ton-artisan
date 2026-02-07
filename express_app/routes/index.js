@@ -3,6 +3,6 @@ const router = express.Router();
 
 const artisanRoute = require('./artisan');
 
-router.use('/artisan', userRoute);
+router.use('/artisan', artisanRoute);
 
 module.exports = router;

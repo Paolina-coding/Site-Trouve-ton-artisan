@@ -1,10 +1,12 @@
+require('dotenv').config();
+
 const express = require('express');
 const app = express();
 
 const indexRouter = require('./routes/index.js');
-const artisanRouter = require('./routes/artisan.js');
 
 app.use('/', indexRouter);
-app.use('/artisan', artisanRouter);
+
+app.listen(3000, () => { console.log("Serveur Express démarré sur http://localhost:3000"); });
 
 module.exports = app;

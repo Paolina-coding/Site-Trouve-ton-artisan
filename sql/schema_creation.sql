@@ -2,9 +2,9 @@
 DROP DATABASE IF EXISTS artisans_ARA;
 CREATE DATABASE artisans_ARA;
 
--- création de l'utilisateur responsable avec tous les droits sur cette base de données
+-- création de l'utilisateur responsable avec tous les droits sur cette base de données (ici le mot de passe a été modifié car le fichier est sur GitHub)
 DROP USER IF EXISTS 'responsable'@'localhost';
-CREATE USER 'responsable'@'localhost' IDENTIFIED BY 'mot_de_passe_responsable';
+CREATE USER 'responsable'@'localhost' IDENTIFIED BY '***'; 
 GRANT ALL PRIVILEGES ON artisans_ARA.* TO 'responsable'@'localhost' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 
