@@ -1,16 +1,18 @@
 import Header from "../ui/header";
 import Footer from "../ui/footer";
+import CarteArtisan from "../ui/carteArtisan";
 
-const Erreur_404 = () => {
+const Categorie = () => {
   return (
     <main className="container">
         <Header/>
         <div>
-            <h2>La page que vous avez demandé n'existe pas.</h2>        
+            <h2>Voici les résultats de votre recherche</h2>
+            <CarteArtisan/>    
         </div>
         <Footer/>     
     </main>
   );
 };
 
-export default Erreur_404;
+export default Categorie;
