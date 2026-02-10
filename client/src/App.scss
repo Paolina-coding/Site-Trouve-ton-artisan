@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Graphik';
+  src: url('../public/fonts/Graphik_Collection/Graphik\ Family/Graphik-Regular-Trial.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 html, body, #root {
   height: 100%;
   margin: 0;
