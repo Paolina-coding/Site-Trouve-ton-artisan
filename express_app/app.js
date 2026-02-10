@@ -10,6 +10,7 @@ app.use(express.json());
 const indexRouter = require('./routes/index.js');
 app.use('/', indexRouter);
 
-app.listen(3000, () => { console.log("Serveur Express démarré sur http://localhost:3000"); });
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => { console.log(`Serveur Express démarré sur le port ${PORT}` ); });
 
 module.exports = app;
