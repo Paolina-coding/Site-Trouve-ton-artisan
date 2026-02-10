@@ -8,6 +8,13 @@ exports.getArtisansByName = async (name) => {
   });
 };
 
+exports.getArtisanById = async (id) => {
+  return Artisan.findAll({
+    where: { id_artisan: id },
+    include: [{model: Specialite, include: [Categorie]}]
+  });
+};
+
 /*Récupère les artisans par l'id de la catégorie et renvoit les détails des artisans avec leur catégorie et spécialité. Le required true permet de faire un inner join*/
 exports.getArtisansByCategorie = async (idCategorie) => {
   return Artisan.findAll({

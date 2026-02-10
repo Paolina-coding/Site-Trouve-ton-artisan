@@ -43,3 +43,18 @@ exports.getArtisansByName = async (req, res) => {
     return res.status(500).json({ error: "Erreur serveur" });
   }
 };
+
+exports.getArtisanById = async (req, res) => {
+  try {
+    const id = req.params.id;
+    const artisan = await service.getArtisanById(id);
+
+    if (!artisan) {
+      return res.status(404).json({ message: "Aucun artisan trouvé avec cet identifiant" }); 
+    }
+    return res.json(artisan);
+  } 
+  catch (error) {
+    return res.status(500).json({ error: "Erreur serveur" });
+  }
+};

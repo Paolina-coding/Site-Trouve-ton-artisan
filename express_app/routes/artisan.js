@@ -6,5 +6,6 @@ const controller = require('../controllers/artisan.controller');
 router.get('/top', controller.getTopArtisans);
 router.get('/categorie/:id', controller.getArtisansByCategorie);
 router.get('/search/:nom', controller.getArtisansByName);
+router.get('/:id', controller.getArtisanById);
 
 module.exports = router;
