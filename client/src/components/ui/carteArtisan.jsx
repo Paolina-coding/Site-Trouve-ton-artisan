@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 
 const CarteArtisan = ({ artisan }) => {
   return (
-    <Link to={`/artisan/${artisan.id_artisan}`} >
-        <div className="card" style={{ width: "18rem" }}>
+    <Link to={`/artisan/${artisan.id_artisan}`} className="carte-artisan-link">
+        <div className="card">
         <div className="card-body">
-            <h5 className="card-title">{artisan.nom}</h5>
+            <h3>{artisan.nom}</h3>
             <p className="card-text">Note : {artisan.note}</p>
             <p className="card-text">
             Spécialité : {artisan.Specialite?.nom_specialite}

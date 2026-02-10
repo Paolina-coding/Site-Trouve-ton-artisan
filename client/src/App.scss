@@ -1,0 +1,76 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+.App {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  background-color: #F1F8FC;
+}
+
+.navbar-nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+    } 
+
+.nav-link { 
+    text-align: right;
+    width: 100%; 
+}
+
+.recherche {
+    border-right: 1px solid #0074C7;
+    border-bottom: 1px solid #0074C7;
+    input{
+    background-color: #F1F8FC;
+    outline: none;
+    border: none;
+    }
+}
+
+body h2{
+    color: #0074C7;
+    text-align: center;
+}
+
+body h3{
+    color: #00497C;
+}
+
+.conteneur-cartes {
+  display: flex;
+}
+
+.card {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #F1F8FC !important;
+}
+
+.carte-artisan-link {
+  text-decoration: none;
+  color: inherit; 
+}
+
+.footer {
+    margin-top: auto;
+    background-color: #0074C7;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    ul {
+        list-style: none; 
+        padding: 0;
+        margin: 0;
+    }
+}
