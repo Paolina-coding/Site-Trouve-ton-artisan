@@ -1,9 +1,17 @@
 const { Artisan, Specialite, Categorie } = require('../models');
+const { Op } = require("sequelize");
 
 /*Récupère le(s) artisan(s) avec le nom. Le include permet de faire un JOIN pour récupérer les noms des spécialités et catégories*/
 exports.getArtisansByName = async (name) => {
   return Artisan.findAll({
-    where: { nom: name },
+    where: { nom: { [Op.like]: `%${name}%` } },
+    include: [{model: Specialite, include: [Categorie]}]
+  });
+};
+
+exports.getArtisanById = async (id) => {
+  return Artisan.findOne({
+    where: { id_artisan: id },
     include: [{model: Specialite, include: [Categorie]}]
   });
 };
