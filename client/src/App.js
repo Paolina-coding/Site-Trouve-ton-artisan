@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Header from "./components/ui/header.jsx";
 import Footer from "./components/ui/footer.jsx";
 import Accueil from "./components/pages/accueil.jsx";
-import Erreur_404 from "./components/pages/404";
+import Erreur404 from "./components/pages/404";
 import Recherche from "./components/pages/recherche";
 import Categorie from "./components/pages/categorie.jsx";
 import Artisan from "./components/pages/artisan";
@@ -19,7 +19,7 @@ function App() {
           <Route path="/artisan/categorie/:id" element={<Categorie />} />
           <Route path="/artisan/:id" element={<Artisan />} />        
           <Route path="/legal" element={<Legal />} />
-          <Route path="*" element={<Erreur_404 />} />
+          <Route path="*" element={<Erreur404 />} />
         </Routes>
       </main>
       <Footer/>
