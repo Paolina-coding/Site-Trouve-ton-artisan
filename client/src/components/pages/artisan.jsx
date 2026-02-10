@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-import Header from "../ui/header";
-import Footer from "../ui/footer";
 import { getArtisanById } from "../../api";
 
 const Artisan = () => {
@@ -16,16 +14,13 @@ const Artisan = () => {
     if (!artisan) {
         return (
         <main className="container">
-            <Header />
             <p>Chargement...</p>
-            <Footer />
         </main>
         );
     }
 
     return (
         <main className="container">
-        <Header />
         <div>
             <h2>{artisan.nom}</h2>
             <p>
@@ -53,14 +48,13 @@ const Artisan = () => {
 
             <div className="mb-3">
                 <label htmlFor="message" className="form-label">Message</label>
-                <input type="textarea" className="form-control" id="message" placeholder="Veuillez écrire votre message ici"/>
+                <textarea className="form-control" id="message" placeholder="Veuillez écrire votre message ici" rows="5"/>
             </div>
 
             <button type="submit" className="btn btn-primary">Envoyer</button>
             </form>
         </div>
 
-        <Footer />
         </main>
     );
     };

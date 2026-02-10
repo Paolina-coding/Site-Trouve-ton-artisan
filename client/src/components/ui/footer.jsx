@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="container-fluid">
-        <div >
+    <div className="footer container-fluid">
+        <div className="text-white text-center">
             <ul>
                 <li className="nav-item">
                     <Link className="nav-link" to="/legal">Mentions légales</Link>
@@ -19,7 +19,7 @@ const Footer = () => {
                 </li>
             </ul>
         </div>
-        <address class="text-white text-center">
+        <address className="text-white text-center">
             Adresse : 101 cours Charlemagne<br />
             CS 20033<br />
             69269 LYON CEDEX 02<br />

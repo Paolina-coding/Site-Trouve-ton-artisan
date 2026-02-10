@@ -1,5 +1,3 @@
-import Header from "../ui/header";
-import Footer from "../ui/footer";
 import CarteArtisan from "../ui/carteArtisan";
 import { useEffect, useState } from "react";
 import { getTopArtisans } from "../../api";
@@ -13,12 +11,11 @@ const Accueil = () => {
 
   return (
     <main className="container">
-        <Header/>
         <div>
             <div>
             <h2>Comment trouver mon artisan?</h2>
                 <h3>1. Choisir la catégorie d'artisanat dans le menu</h3>
-                <p>En haut à droite de votre écran, vous trouverez les différentes catégories d'artisans. Sélectionnez celle qui correspond à votre besoin pour 
+                <p>En haut de votre écran, vous trouverez les différentes catégories d'artisans. Sélectionnez celle qui correspond à votre besoin pour 
                   afficher la liste des professionnels disponibles.</p>
                 <h3>2. Choisir un artisan</h3>
                 <p>Une fois la catégorie choisie, vous accédez à une page regroupant tous les artisans correspondants. Vous pouvez rapidement voir leur note, 
@@ -38,15 +35,14 @@ const Accueil = () => {
               {Array.isArray(topArtisans) && (
                 <div className="row mt-3">
                   {topArtisans.map(artisan => (
-                    <div className="col-md-4 mb-3" key={artisan.id_artisan}>
+                    <div className="col-md-4 mb-3 conteneur-cartes" key={artisan.id_artisan}>
                       <CarteArtisan artisan={artisan} />
                     </div>
                   ))}
                 </div>
           )}
             </div>
-        </div>
-        <Footer/>     
+        </div>    
     </main>
   );
 };
