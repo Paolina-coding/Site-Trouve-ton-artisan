@@ -8,9 +8,6 @@ import Categorie from "./components/pages/categorie.jsx";
 import Artisan from "./components/pages/artisan";
 import Legal from "./components/pages/legal";
 
-import './App.scss';
-
-
 function App() {
   return (
     <div className="App">
@@ -31,4 +28,3 @@ function App() {
 }
 
 export default App;
-

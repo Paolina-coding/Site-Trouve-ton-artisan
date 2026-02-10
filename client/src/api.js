@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3000/artisan";
+const API_URL = "https://site-trouve-ton-artisan.onrender.com/artisan";
 
 export async function getTopArtisans() {
   const res = await fetch(`${API_URL}/top`);
