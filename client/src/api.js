@@ -15,7 +15,7 @@ export async function searchArtisans(nom) {
   return res.json();
 }
 
-export async function getArtisan(id) {
+export async function getArtisanById(id) {
   const res = await fetch(`${API_URL}/${id}`);
   return res.json();
 }

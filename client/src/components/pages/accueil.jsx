@@ -1,7 +1,16 @@
 import Header from "../ui/header";
 import Footer from "../ui/footer";
+import CarteArtisan from "../ui/carteArtisan";
+import { useEffect, useState } from "react";
+import { getTopArtisans } from "../../api";
 
 const Accueil = () => {
+  const [topArtisans, setTopArtisans] = useState(null);
+
+  useEffect(() => {
+      getTopArtisans().then(data => setTopArtisans(data)); 
+  }, []);
+
   return (
     <main className="container">
         <Header/>
@@ -20,9 +29,21 @@ const Accueil = () => {
                 <h3>4. Une réponse sera apportée sous 48h</h3>
                 <p>Après avoir cliqué sur “Envoyer”, votre message est transmis à l'artisan ou à son entreprise. Ils vous répondront dans un délai maximum de 48 heures.</p>
             </div>
+
             <div>
-            <h2>Artisans du mois</h2>
-            
+              <h2>Artisans du mois</h2>
+
+              {topArtisans === null && <p>Chargement...</p>}
+
+              {Array.isArray(topArtisans) && (
+                <div className="row mt-3">
+                  {topArtisans.map(artisan => (
+                    <div className="col-md-4 mb-3" key={artisan.id_artisan}>
+                      <CarteArtisan artisan={artisan} />
+                    </div>
+                  ))}
+                </div>
+          )}
             </div>
         </div>
         <Footer/>     
